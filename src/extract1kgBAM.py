@@ -13,18 +13,18 @@ import logging
 import re
 
 '''
-input sample_id AND prefix of bams
+input path of bams
 input target files containing chromosome:start-stop
 input working directory
 
 ./extract1kgBAM.py 
---bamlist bam_list/bam_batch.list 
---target regions/MT.OID44970_hg19_nuclear_mito_170724_primary_targets.list 
+--bamlist bam_batch.list 
+--target primary_targets.list 
 --workdir ./outputs
 '''
 
 
-# parse arguments: input 1000genome sample ID, region of interest
+# parse arguments: input 1000genome bams, region of interest
 def parse_input():
     def str2bool(v):
         if v.lower() in ('yes', 'true', 't', 'y', '1'):
